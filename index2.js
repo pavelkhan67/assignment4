@@ -8,9 +8,6 @@ function mindGame(number){  // this function will take a number as input and do 
 let initialValue = (((number * 3) + 10) / 2) - 5 ;
 return initialValue;
 }
-const input1 = 33;
-const output1 = mindGame(input1);
-console.log(output1);
 
 
 
@@ -28,9 +25,6 @@ function evenOdd(word) {   //this function will take a string as a input and cou
         return 'odd';
     }
 }
-const input2 = 'chatgpt';
-const output2 = evenOdd(input2);
-console.log(output2);
 
 
 
@@ -48,16 +42,13 @@ function isLGSeven(number) {   // this function will take a number as input and 
         return number * 2;
     }
 }
-const input3 = -15;
-const output3 = isLGSeven(input3);
-console.log(output3);
 
 
 
 /* Question: 4 */
 
 function findingBadData(array) {   // this function will take an array as input and check for negative value in the array and count the total negative value and give us the total number of negative value as result.
-    let BadData = [];
+    let newArray = [];
     let checkArray = Array.isArray(array);
     if (checkArray !== true ) {
         return 'Please enter an array.';
@@ -66,15 +57,11 @@ function findingBadData(array) {   // this function will take an array as input 
     for(i=0; i< array.length; i++){
         const element = array[i];
         if(element < 0){
-            BadData.push(element);  
+            newArray.push(element);  
         }   
     }
-    return BadData.length;  
+    return newArray.length;  
 }
-const input4 = [-4, -9, -5, -33, -55];
-const output4 = findingBadData(input4);
-console.log(output4);
-
 
 
 /* Question: 5 */
@@ -88,12 +75,10 @@ function gemsToDiamond(num1, num2, num3) {  // this function will take three num
     const thirdFriendGems = num3 * 43;
 
     const totalGems = firstFriendGems + secondFriendGems + thirdFriendGems;
-    if(totalGems > (1000*2)){
-        return totalGems - 2000;
-    }
-    else{
+    if(totalGems < (1000*2)){
         return totalGems;
     }
+    else{
+        return totalGems - 2000;
+    }
 }
-const output5 = gemsToDiamond(29,29, 11);
-console.log(output5);
